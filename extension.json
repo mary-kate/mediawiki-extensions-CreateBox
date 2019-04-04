@@ -1,0 +1,31 @@
+{
+	"name": "CreateBox",
+	"version": "2.0",
+	"author": [
+		"Ross McClure",
+		"..."
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:CreateBox",
+	"descriptionmsg": "createbox-desc",
+	"type": "parserhook",
+	"license-name": "GPL-2.0-or-later",
+	"requires": {
+		"MediaWiki": ">= 1.32.0"
+	},
+	"MessagesDirs": {
+		"CreateBox": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"CreateAction": "CreateAction.php",
+		"CreateBox": "CreateBox.class.php"
+	},
+	"Actions": {
+		"create": "CreateAction"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "CreateBox::onParserFirstCallInit"
+	},
+	"manifest_version": 1
+}
